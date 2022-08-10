@@ -73,6 +73,10 @@ async def expo(ctx,   keko):
     cristal = Image.open(r"imagenes/cristal.png").convert("RGBA") #imagen
     img1 = cristal.resize((60,92), Image.Resampling.LANCZOS)#tamaño de la cristal
 
+
+    ###
+    trozo = Image.open(r"imagenes/trozo.png").convert("RGBA") #imagen
+    img1 = trozo.resize((60,92), Image.Resampling.LANCZOS)#tamaño de la cristal
     ###
     expo = Image.open(r"imagenes/arribaexpo.png").convert("RGBA") #imagen
     img1 = expo.resize((60,92), Image.Resampling.LANCZOS)#tamaño de la arribaexpo
@@ -91,6 +95,8 @@ async def expo(ctx,   keko):
     
     img1.paste(cristal,(0,0), mask = cristal) #Posicion de la cristal
     img1.paste(expo,(0,0), mask = expo) #Posicion de la expo
+
+    img1.paste(trozo,(0,0), mask = trozo) #Posicion de la trozo
 
     
     ### 
